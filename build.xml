@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--★★★★★★-->
+<project name="SiteMapProject" default="dist">
+ <!--
+    <property file="build.properties" />
+ -->   
+ <property name="base.dir" value="D:\PHProject\workspace\SiteMapProject"/>
+ <property name="dist.dir" value="D:\\xampp\\htdocs"/>
+ 
+ <!-- 빌드 초기 단계에 날짜 및 시간 출력 -->
+ <target name="prepare">
+  <tstamp>
+   <format property="DSTAMP" pattern="yyyy.mm.dd" />
+   <format property="TSTAMP" pattern="HH:mm" />
+  </tstamp>
+ </target>
+
+ <!-- 이미 있는 배포 파일 및 디렉토리 삭제 -->
+ <target name="clean" depends="prepare">
+  <delete dir="${dist.dir}"/>
+ </target>
+
+<!-- 파일 카피 -->
+ <target name="dist" depends="clean">
+  <copy todir="${dist.dir}">
+   <fileset dir="${base.dir}" />
+  </copy>
+ </target>
+ 
+<!-- 불필요한 파일 삭제 -->
+<target name="dist delete files" depends="dist">
+ <delete file="${dist.dir}/.project" />
+<!--	
+ <delete file="${dist.dir}/build.properties" />
+--> 
+ <delete file="${dist.dir}/build.xml" />
+<!--	
+ <delete includeEmptyDirs="true">
+  <fileset dir="${dist.dir}/.settings"/>
+ </delete>
+--> 
+</target>
+  
+</project>

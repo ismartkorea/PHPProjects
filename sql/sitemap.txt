@@ -1,0 +1,40 @@
+grant all privileges on ismart01.* to 'ismart01'@localhost identified by 'ismart7212';
+
+create database ismart01;
+
+flush privileges;
+
+
+/*-- 메인 테이블 --*/
+DROP TABLE IF EXITS tbl_sitemap_ko;
+CREATE TABLE `tbl_sitemap_ko` (
+  `no` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '번호',
+  `ctg_code` CHAR(2) NOT NULL COMMENT '카테고리코드',
+  `ctg_name`   VARCHAR(20) NOT NULL COMMENT '카테고리명',
+  `site_name`  VARCHAR(40) NOT NULL COMMENT '사이트명',
+  `site_url`   VARCHAR(60) NOT NULL COMMENT '사이트URL', 
+  `regist_user` varchar(20) DEFAULT NULL COMMENT '등록자명',
+  `regist_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '등록일',
+  `update_user` varchar(20) DEFAULT '0000-00-00 00:00:00' COMMENT '수정자명',
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '수정일',
+  PRIMARY KEY(`no`)
+) DEFAULT CHARSET=utf8 COMMENT='사이트맵(한국) 테이블';
+
+/*-- 유저 테이블 --*/
+DROP TABLE IF EXITS `tbl_user`;
+CREATE TABLE `tbl_user` (
+  `user_id`	        VARCHAR(8)  NOT NULL COMMENT '아이디',
+  `user_name`   VARCHAR(20) NOT NULL COMMENT '유저명',
+  `user_pwd`    VARCHAR(40) NOT NULL COMMENT '유저비밀번호',
+  `user_level`  CHAR(2) NOT NULL COMMENT '유저등급',
+  `regist_user` varchar(20) DEFAULT NULL COMMENT '등록자명',
+  `regist_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '등록일',
+  `update_user` varchar(20) DEFAULT NULL COMMENT '수정자명',
+  `update_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '수정일'
+) DEFAULT CHARSET=utf8 COMMENT='유저 테이블';
+
+
+/*-- 관리자 아이디 생성 --*/
+INSERT INTO tbl_user(`user_id`, `user_name`, `user_pwd`, `user_level`, `regist_user`, `regist_date`) 
+VALUES('admin', 'jyjung', 'root', '01', 'admin', now());
+commit;

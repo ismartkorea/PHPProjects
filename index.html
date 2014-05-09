@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>포털 사이트 맵 메인 페이지.</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+}
+)
+//$("#frm").submit();
+</script>
+</head>
+<body>
+<div id="navi">
+	<ul id="menu">
+		<li><a href="#">홈 로그인</a></li>
+		<li><a href="./manage/sitemap_list.php">관리자</a></li>
+	</ul>	
+</div>
+<div id="container">
+	<div id="search">
+	<form id="frm" name="frm" method="POST">
+		<p>
+			<input type="text" id="searchText" name="searchText" value=""/>
+			<input type="button" id="submitBtn" name="submitBtn" value="전송" onclick="onSubmit();"/>
+		</p>
+	</form>
+	</div>
+</div>
+<footer> 
+	<div class="foot">
+		<div>
+			<p>(주)iSmartKorea.net</p>
+			<p>사업자 등록번호:000-000</p>
+			<small class="copy">Copyright &copy; 2014 iSmartKorea.Net</small>
+		</div>
+	</div> 
+</footer>
+</body>
+</html>
