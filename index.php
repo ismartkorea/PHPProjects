@@ -24,6 +24,16 @@ if(!$db) {
 <head>
 <meta charset="euc-kr">
 <title>포털 사이트 맵 메인 페이지.</title>
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="keywords" content="사이트링크,사이트맵,링크모음,한국사이트맵,코리아사이트맵,sitemap"/>
+<meta name="Classification" content="iSmartKorea.net"/>
+<meta name="Description" content="한국사이트링크모음"/>
+<meta name="Author" content="아이스마트코리아닷넷" />
+<meta name="Copyright" content="iSmartKoreaNet" />
+<meta name="Publisher" content="iSmartKoreaNet"/>
+<meta name="Reply-To(Email)" content="ismartkoreanet@hotmail.com"/>
+<meta name="Location" content="south korea, republic of korea"/>
+<meta name="robots" content="index, follow" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <!--[if lt IE 7]>
