@@ -151,6 +151,7 @@ var frm = document.frm;
 </script>
 </head>
 <body>
+<?php include_once("analyticstracking.php") ?>
    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
 		<div class="container">
 	  <!-- Brand and toggle get grouped for better mobile display -->
