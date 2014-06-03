@@ -1,8 +1,8 @@
 <?php
-##### ªÁøÎ¿⁄ ¡§¿« «‘ºˆ »£√‚.
+##### ÏÇ¨Ïö©ÏûêÏ†ïÏùò Ìò∏Ï∂ú.
 require_once("common/function.user.php");
 
-##### ∞¯≈Î º≥¡§ «‘ºˆ »£√‚.
+##### ÌôòÍ≤ΩÏÑ§Ï†ï Ìò∏Ï∂ú.
 #$cfg_file = "config" . $code . ".php";
 if(file_exists('common/config.sitemap.php')) {
 	require_once('common/config.sitemap.php');
@@ -11,7 +11,7 @@ if(file_exists('common/config.sitemap.php')) {
 	exit;
 }
 
-##### µ•¿Ã≈∏ ∫£¿ÃΩ∫ ¡¢º”.
+##### DB Ï†ëÏÜç
 $db = mysql_select_db($dbName);
 if(!$db) {
 	error("FAILED_TO_SELECT_DB");
@@ -22,13 +22,13 @@ if(!$db) {
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="euc-kr">
-<title>∆˜≈– ªÁ¿Ã∆Æ ∏  ∏ﬁ¿Œ ∆‰¿Ã¡ˆ.</title>
+<meta charset="UTF-8">
+<title>Ìè¨ÌÑ∏ ÏÇ¨Ïù¥Ìä∏ Îßµ Î©îÏù∏ ÌéòÏù¥ÏßÄ.</title>
 <meta http-equiv="imagetoolbar" content="no" />
-<meta name="keywords" content="ªÁ¿Ã∆Æ∏µ≈©,ªÁ¿Ã∆Æ∏ ,∏µ≈©∏¿Ω,«—±πªÁ¿Ã∆Æ∏ ,ƒ⁄∏Ææ∆ªÁ¿Ã∆Æ∏ ,sitemap"/>
+<meta name="keywords" content="ÏÇ¨Ïù¥Ìä∏ÎßÅÌÅ¨,ÏÇ¨Ïù¥Ìä∏Îßµ,ÎßÅÌÅ¨Î™®Ïùå,ÌïúÍµ≠ÏÇ¨Ïù¥Ìä∏Îßµ,ÏΩîÎ¶¨ÏïÑÏÇ¨Ïù¥Ìä∏Îßµ,sitemap"/>
 <meta name="Classification" content="iSmartKorea.net"/>
-<meta name="Description" content="«—±πªÁ¿Ã∆Æ∏µ≈©∏¿Ω"/>
-<meta name="Author" content="æ∆¿ÃΩ∫∏∂∆Æƒ⁄∏Ææ∆¥Â≥›" />
+<meta name="Description" content="ÌïúÍµ≠ÏÇ¨Ïù¥Ìä∏ÎßÅÌÅ¨Î™®Ïùå"/>
+<meta name="Author" content="ÏïÑÏù¥Ïä§ÎßàÌä∏ÏΩîÎ¶¨ÏïÑÎã∑ÎÑ∑" />
 <meta name="Copyright" content="iSmartKoreaNet" />
 <meta name="Publisher" content="iSmartKoreaNet"/>
 <meta name="Reply-To(Email)" content="ismartkoreanet@hotmail.com"/>
@@ -150,7 +150,7 @@ color: #f8f8f8;
 onSubmit = function() {
 var frm = document.frm;
 	if(frm.searchText.value == "") {
-		alert("∞Àªˆ«“ ªÁ¿Ã∆Æ∏Ì¿ª ¿‘∑¬«œººø‰.");
+		alert("Í≤ÄÏÉâÌï† ÏÇ¨Ïù¥Ìä∏Î™ÖÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî.");
 		frm.searchText.focus();		
 		return false;
 	}
@@ -173,9 +173,9 @@ var frm = document.frm;
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<form id="frm" name="frm" method="post" class="navbar-form navbar-right visible-lg" role="search">
 		  <div class="form-group">
-			<input type="text" id="searchText" name="searchText" class="form-control" placeholder="&nbsp;∞Àªˆ«“ ªÁ¿Ã∆Æ∏Ì ¿‘∑¬«œººø‰." required>
+			<input type="text" id="searchText" name="searchText" class="form-control" placeholder="&nbsp;Í≤ÄÏÉâÌï† ÏÇ¨Ïù¥Ìä∏Î™Ö ÏûÖÎ†•ÌïòÏÑ∏Ïöî." required>
 		  </div>
-		  <button type="submit" id="submitBtn" name="submitBtn" class="btn btn-primary" onclick="onSubmit();">∞Àªˆ</button>
+		  <button type="submit" id="submitBtn" name="submitBtn" class="btn btn-primary" onclick="onSubmit();">Í≤ÄÏÉâ</button>
 		</form>
 	</div><!-- /.navbar-collapse --> 
 	</div>	
@@ -187,7 +187,7 @@ var frm = document.frm;
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h1>ƒ⁄∏Ææ∆ ªÁ¿Ã∆Æ∏  (∏µ≈©∏¿Ω ªÁ¿Ã∆Æ)</h1>
+					<h1>ÏΩîÎ¶¨ÏïÑ ÏÇ¨Ïù¥Ìä∏Îßµ (ÎßÅÌÅ¨Î™®Ïùå ÏÇ¨Ïù¥Ìä∏)</h1>
 				</div>
 			</div>
 		</div>
@@ -195,7 +195,7 @@ var frm = document.frm;
 <?php 
 	if($AD_IMAGE != "") {
 ?>
-<!-- ±§∞Ì -->
+<!-- Í¥ëÍ≥† Î∂ÄÎ∂Ñ -->
 <div id="ad">
 	<table width="766" height="100" border="0" cellpadding="0" cellspacing="0">
 		<tr>
@@ -208,25 +208,30 @@ var frm = document.frm;
 ?>
 <div id="container" align="center">
 <table width='766' border='0' cellpadding='0' cellspacing='0'>
-<!--  1π¯¬∞ «‡ Ω√¿€ -->
+<!--  1Î≤àÏß∏-->
 <tr>
  <td colspan="15"></td>
 </tr>
  <tr>
   <td>
-<!-- 1π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 1Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '01'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td align=center height=20  bgcolor="#F5EBF6"><font face="µ∏øÚ" color='#CB448D'>∆˜≈–</font></td>
+        <td align=center height=20  bgcolor="#F5EBF6"><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170' bgcolor="white">
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE `ctg_code` = '01'";
 $result = mysql_query($query);
 if($result) {
@@ -259,19 +264,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
   <td>
-<!-- 2π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 2Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '02'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20><font face="µ∏øÚ" color='#CB448D'>ƒøπ¬¥œ∆º</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '02'";
 $result = mysql_query($query);
 if($result) {
@@ -304,19 +314,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 3π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 3Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '03'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20><font face="µ∏øÚ" color='#CB448D'>Ω≈πÆ</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '03'";
 $result = mysql_query($query);
 if($result) {
@@ -349,19 +364,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 4π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 4Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '04'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20><font face="µ∏øÚ" color='#CB448D'>πÊº€</td>
+        <td bgcolor="#ECDEEC" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '04'";
 $result = mysql_query($query);
 if($result) {
@@ -394,19 +414,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 5π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 5Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '05'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20><font face="µ∏øÚ" color='#CB448D'>Ω∫∆˜√˜</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '05'";
 $result = mysql_query($query);
 if($result) {
@@ -439,20 +464,25 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 6π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 6Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '06'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>       
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20> <font color="#CB448D">ºÓ«Œ∏Ù</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20> <font color="#CB448D"><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
 			<table height=170 cellSpacing=0 cellPadding=0 width=91 border=0>
 			<tbody>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '06'";
 $result = mysql_query($query);
 if($result) {
@@ -486,19 +516,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 7π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 7Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '07'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>        
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20> <font color="#CB448D">¿⁄µø¬˜</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20> <font color="#CB448D"><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '07'";
 $result = mysql_query($query);
 if($result) {
@@ -531,19 +566,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 8π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 8Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '08'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20> <font face="µ∏øÚ" color='#CB448D'>ø©º∫</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20> <font face="ÔøΩÔøΩÔøΩÔøΩ" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '08'";
 $result = mysql_query($query);
 if($result) {
@@ -575,27 +615,32 @@ if($result) {
  
  </tr>
  
- <!--  1π¯¬∞ «‡ ≥° -->
+ <!--  1Î≤àÏß∏ Ìñâ ÎÅù -->
 
- <!--  2π¯¬∞ «‡ Ω√¿€ -->
+<!--  2Î≤àÏß∏ Ìñâ ÏãúÏûë -->
 <tr>
  <td colspan="15"></td>
 </tr>
  <tr>
   <td>
-<!-- 1π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 1Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '09'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>  
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td align=center height=20  bgcolor="#F5EBF6"><font face="µ∏øÚ" color='#CB448D'>ø©«‡</font></td>
+        <td align=center height=20  bgcolor="#F5EBF6"><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170' bgcolor="white">
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '09'";
 $result = mysql_query($query);
 if($result) {
@@ -628,19 +673,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
   <td>
-<!-- 2π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 2Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '10'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>   
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20><font face="µ∏øÚ" color='#CB448D'>∞‘¿”</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '10'";
 $result = mysql_query($query);
 if($result) {
@@ -673,19 +723,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 3π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 3Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '11'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>  
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20><font face="µ∏øÚ" color='#CB448D'>ø±±‚</td>
+        <td bgcolor="#F5EBF6" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '11'";
 $result = mysql_query($query);
 if($result) {
@@ -718,19 +773,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 4π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 4Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+ <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '12'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>      
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20><font face="µ∏øÚ" color='#CB448D'>¿•≈˜</td>
+        <td bgcolor="#ECDEEC" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '12'";
 $result = mysql_query($query);
 if($result) {
@@ -763,19 +823,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 5π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 5Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '13'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>        
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20><font face="µ∏øÚ" color='#CB448D'>√§∆√/∏∏≥≤</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '13'";
 $result = mysql_query($query);
 if($result) {
@@ -808,20 +873,25 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 6π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 6Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '14'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>      
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20> <font color="#CB448D">¿Ωæ«</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20> <font color="#CB448D"><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
 			<table height=170 cellSpacing=0 cellPadding=0 width=91 border=0>
 			<tbody>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '14'";
 $result = mysql_query($query);
 if($result) {
@@ -855,19 +925,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 7π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 7Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '15'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20> <font color="#CB448D">øµ»≠/πÆ»≠</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20> <font color="#CB448D"><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '15'";
 $result = mysql_query($query);
 if($result) {
@@ -900,19 +975,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 8π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 8Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '16'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20> <font face="µ∏øÚ" color='#CB448D'>¿∫«‡</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20> <font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '16'";
 $result = mysql_query($query);
 if($result) {
@@ -943,28 +1023,32 @@ if($result) {
   </td>
  
  </tr>
+ <!--  2Î≤àÏß∏ Ìñâ ÎÅù -->
  
- <!--  2π¯¬∞ «‡ ≥° -->
- 
-  <!--  3π¯¬∞ «‡ Ω√¿€ -->
+  <!--  3Î≤àÏß∏ Ìñâ ÏãúÏûë -->
 <tr>
  <td colspan="15"></td>
 </tr>
  <tr>
   <td>
-<!-- 1π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 1Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '17'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>  
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td align=center height=20  bgcolor="#F5EBF6"><font face="µ∏øÚ" color='#CB448D'>±›¿∂</font></td>
+        <td align=center height=20  bgcolor="#F5EBF6"><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170' bgcolor="white">
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '17'";
 $result = mysql_query($query);
 if($result) {
@@ -997,19 +1081,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
   <td>
-<!-- 2π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 2Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '18'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20><font face="µ∏øÚ" color='#CB448D'>∞¯∞¯</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '18'";
 $result = mysql_query($query);
 if($result) {
@@ -1042,19 +1131,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 3π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 3Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '18'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20><font face="µ∏øÚ" color='#CB448D'>√Îæ˜/√¢æ˜</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '19'";
 $result = mysql_query($query);
 if($result) {
@@ -1087,19 +1181,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 4π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 4Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '20'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20><font face="µ∏øÚ" color='#CB448D'>π˝∑¸/≈√πË</td>
+        <td bgcolor="#ECDEEC" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '20'";
 $result = mysql_query($query);
 if($result) {
@@ -1132,19 +1231,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 5π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 5Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+  <?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '21'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20><font face="µ∏øÚ" color='#CB448D'>¿«∑·</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20><font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '21'";
 $result = mysql_query($query);
 if($result) {
@@ -1177,20 +1281,25 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 6π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 6Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+<?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '22'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20> <font color="#CB448D">∆–º«¿«∑˘</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20> <font color="#CB448D"><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
 			<table height=170 cellSpacing=0 cellPadding=0 width=91 border=0>
 			<tbody>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '22'";
 $result = mysql_query($query);
 if($result) {
@@ -1224,19 +1333,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 7π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 7Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+<?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '23'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#F5EBF6" align=center height=20> <font color="#CB448D">µµº≠</font></td>
+        <td bgcolor="#F5EBF6" align=center height=20> <font color="#CB448D"><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#ffffff'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '23'";
 $result = mysql_query($query);
 if($result) {
@@ -1269,19 +1383,24 @@ if($result) {
  <td width="1"><img src="images/blank.gif" width="1"></td>
  
     <td>
-<!-- 8π¯¬∞ table¿Ã µÈæÓ∞°¥¬∞˜ -->
+<!-- 8Î≤àÏß∏ tableÏù¥ Îì§Ïñ¥Í∞ÄÎäîÍ≥≥ -->
+<?php 
+ 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_ko WHERE `ctg_code` = '24'";
+ 	$cat_result = mysql_query($cat_query);
+ 	$cat_nm = mysql_result($cat_result,0);
+ ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
      <td>
       <table border='0' cellpadding='0' cellspacing='0' width='96' height='200'>
        <tr>
-        <td bgcolor="#ECDEEC" align=center height=20> <font face="µ∏øÚ" color='#CB448D'>∞°∞›∫Ò±≥</font></td>
+        <td bgcolor="#ECDEEC" align=center height=20> <font face="<?php echo($FONT_STYLE)?>" color='#CB448D'><?php echo($cat_nm)?></font></td>
        </tr>
        <tr>
         <td bgcolor='#F3EFF5'>
          <table border='0' cellpadding='0' cellspacing='0' width='96' height='170'>
 <?php 
-// ƒı∏Æ ¿€º∫.
+// Ï°∞ÌöåÏ≤òÎ¶¨.
 $query = "SELECT site_name, site_url FROM tbl_sitemap_ko WHERE ctg_code = '24'";
 $result = mysql_query($query);
 if($result) {
@@ -1313,7 +1432,7 @@ if($result) {
  
  </tr>
  
- <!--  3π¯¬∞ «‡ ≥° -->
+ <!--  3Î≤àÏß∏ Ìñâ ÎÅù -->
  
 </table>
 </div>
@@ -1331,10 +1450,10 @@ if($result) {
 							<div>
 								<ul class="list-unstyled">
 									<li>
-										 <a href="http://www.ismartkorea.net/">æ∆¿ÃΩ∫∏∂∆Æƒ⁄∏Ææ∆ ¥Â≥›</a>
+										 <a href="http://www.ismartkorea.net/">ÏïÑÏù¥Ïä§ÎßàÌä∏ÏΩîÎ¶¨ÏïÑÎã∑ÎÑ∑</a>
 									</li>
 									<li>
-										 <a href="http://www.bluewisesoft.com/">∫Ì∑ÁøÕ¿Ã¡Óº“«¡∆Æ</a>
+										 <a href="http://www.bluewisesoft.com/">Î∏îÎ£®ÏôÄÏù¥Ï¶àÏÜåÌîÑÌä∏</a>
 									</li>
 									<li>
 										 <a></a>

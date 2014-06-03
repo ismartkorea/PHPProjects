@@ -4,7 +4,7 @@
  <!--
     <property file="build.properties" />
  -->   
- <property name="base.dir" value="D:\PHProject\workspace\SiteMapProject"/>
+ <property name="base.dir" value="D:\PHProject\workspace\Sitemap"/>
  <property name="dist.dir" value="D:\\xampp\\htdocs"/>
  
  <!-- 빌드 초기 단계에 날짜 및 시간 출력 -->

@@ -1,11 +1,11 @@
 <?php 
-	header("content-type:text/html; charset=euc-kr");
+	header("content-type:text/html; charset=UTF-8");
 ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="euc-kr">
-<title>����Ʈ�� ȭ��</title>
+<meta charset="UTF-8">
+<title>포털 사이트 맵 메인 페이지.</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="<?php  $_SERVER['DOCUMENT_ROOT'] ?>/css/bootstrap.css" />
 <script type="text/javascript" src="<?php  $_SERVER['DOCUMENT_ROOT'] ?>/js/jquery-1.11.0.js"></script>
