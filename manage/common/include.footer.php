@@ -12,10 +12,10 @@
 							<div>
 								<ul class="list-unstyled">
 									<li>
-										 <a href="http://www.ismartkorea.net/">¾ÆÀÌ½º¸¶Æ®ÄÚ¸®¾Æ ´å³Ý</a>
+										 <a href="http://www.ismartkorea.net/">ì•„ì´ìŠ¤ë§ˆíŠ¸ì½”ë¦¬ì•„ë‹·ë„·</a>
 									</li>
 									<li>
-										 <a href="http://www.bluewisesoft.com/">ºí·ç¿ÍÀÌÁî¼ÒÇÁÆ®</a>
+										 <a href="http://www.bluewisesoft.com/">ë¸”ë£¨ì™€ì´ì¦ˆì†Œí”„íŠ¸</a>
 									</li>
 									<li>
 										 <a></a>

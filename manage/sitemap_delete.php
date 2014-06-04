@@ -1,10 +1,10 @@
 <?php
-##### ¼¼¼ÇÃ¼Å©.
+##### 
 require_once("common/include.session.check.php");
 
-##### »ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö È£Ãâ.
+##### 
 require_once("../common/function.user.php");
-##### °øÅë ¼³Á¤ ÇÔ¼ö È£Ãâ.
+##### 
 #$cfg_file = "config" . $code . ".php";
 if(file_exists('../common/config.sitemap.php')) {
 	require_once('../common/config.sitemap.php');
@@ -12,7 +12,7 @@ if(file_exists('../common/config.sitemap.php')) {
 	error("NOT_FOUND_CONFIG_FILE");
 	exit;
 }
-##### µ¥ÀÌÅ¸ º£ÀÌ½º Á¢¼Ó.
+##### 
 $db = mysql_select_db($dbName);
 if(!$db) {
 	error("FAILED_TO_SELECT_DB");
@@ -26,7 +26,7 @@ $getDelNo = $_POST['chkBox'];
 for($i = 0; $i < count($getDelNo); $i++){
 	//echo $getDelNo[$i]."<br>";
 	//echo("chkBox[" . $i . "] = " . $getDelNo[$i]);
-	// Äõ¸® ÀÛ¼º.
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½Û¼ï¿½.
 	$query = "DELETE FROM tbl_sitemap_ko WHERE no = $getDelNo[$i]";
 	//
 	$result = mysql_query($query);	
@@ -34,7 +34,7 @@ for($i = 0; $i < count($getDelNo); $i++){
 if($result) {
 	echo ("<script type=\"text/javascript\">
 	<!--
-		alert('»èÁ¦ÇÏ¿´½À´Ï´Ù.');
+		alert('ì‚­ì œì²˜ë¦¬ ë˜ì—ˆìŠµë‹ˆë‹¤.');
 	//-->
 	</script>");
 	echo ("<meta http-equiv='Refresh' content='0; URL=sitemap_list.php'>");

@@ -1,10 +1,10 @@
 <?php
-##### ¼¼¼ÇÃ¼Å©.
+##### 
 require_once("common/include.session.check.php");
 
-##### »ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö È£Ãâ. 
+##### 
 require_once("../common/function.user.php");
-##### html head °øÅë ºÎºÐ È£Ãâ.
+##### html head 
 require_once("../common/include.header.php");
 ?>
 <style type="text/css">
@@ -44,7 +44,7 @@ onPrev = function() {
  <div id="head" class="bg-primary"  style="height:100">
 	<div id="title">
 		<p align="right" style="height: 30">
-			<a href="signout.php"><b><font color="#000000">·Î±× ¾Æ¿ô</font></b></a>
+			<a href="signout.php"><b><font color="#000000">ë¡œê·¸ì•„ì›ƒ</font></b></a>
 		</p>
 	</div>
  </div>
@@ -52,7 +52,7 @@ onPrev = function() {
       
  <!-- page title -->
  <div class="page_title">
-  <h2>»çÀÌÆ®¸Ê °ü¸® È­¸é - ÀÔ·ÂÈ­¸é</h2>
+  <h2>ê´€ë¦¬ìž í™”ë©´</h2>
  </div>
  <!-- page title -->
 
@@ -63,16 +63,16 @@ onPrev = function() {
     <div>
      <table id="tblForm">
 	    <tr>
-	      	<td>Ä«Å×°í¸® ÄÚµå : </td><td><input type="text" id="ctgCode" name="ctgCode" value="" size="5" required /></td>
+	      	<td>ì¹´í…Œê³ ë¦¬ ì½”ë“œ : </td><td><input type="text" id="ctgCode" name="ctgCode" value="" size="5" required /></td>
 	    </tr>     
 	    <tr>
-	      	<td>Ä«Å×°í¸®¸í : </td><td><input type="text" id="ctgName" name="ctgName" value="" size="50" required /></td>
+	      	<td>ì¹´í…Œê³ ë¦¬ ëª… : </td><td><input type="text" id="ctgName" name="ctgName" value="" size="50" required /></td>
 	    </tr>
 	    <tr>
-	      <td>»çÀÌÆ®¸í : </td><td><input type="text" id="siteName" name="siteName" value="" size="100" required /></td>
+	      <td>ì‚¬ì´íŠ¸ ëª… : </td><td><input type="text" id="siteName" name="siteName" value="" size="100" required /></td>
 	    </tr>
 	    <tr>
-	      <td>»çÀÌÆ® URL : </td><td><input type="text" id="siteUrl" name="siteUrl" value="" size="100" required /></td>
+	      <td>ì‚¬ì´íŠ¸ URL : </td><td><input type="text" id="siteUrl" name="siteUrl" value="" size="100" required /></td>
 	    </tr>	
      </table>
     </div> 
@@ -82,8 +82,8 @@ onPrev = function() {
 		<table>
 			<tr>
 				<td>
-					<input type="button" id="prevBtn" name="prevBtn" value="ÀÌÀü È­¸é"/>&nbsp;
-					<input type="button" id="saveBtn" name="saveBtn" value="ÀúÀå"/>			
+					<input type="button" id="prevBtn" name="prevBtn" value="ì´ì „"/>&nbsp;
+					<input type="button" id="saveBtn" name="saveBtn" value="ì €ìž¥"/>			
 				</td>
 			</tr>	
 		</table>

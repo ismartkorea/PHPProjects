@@ -7,16 +7,16 @@ require_once("common/include.header.php");
 
 		$("#submitBtn").click(onSubmit);
   });
- // Àü¼Û Ã³¸®.
+ // Submit ì²˜ë¦¬.
   onSubmit = function() {
   var frm = document.frm;
 		if(frm.loginId.value == "") {
-			alert("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä!");
+			alert("ë¡œê·¸ì¸ ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”!");
 			frm.loginId.focus();
 			return false;
 		}
 		if(frm.loginPwd.value == "") {
-			alert("ÆĞ½º¿öµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä!");
+			alert("ë¡œê·¸ì¸ íŒ¨ìŠ¤ì›Œë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”!");
 			frm.loginPwd.focus();
 			return false;
 		}
@@ -32,13 +32,13 @@ require_once("common/include.header.php");
     <div class="container">
  
       <form id="frm" name="frm" class="form-signin">
-        <h2 class="form-signin-heading">·Î±×ÀÎ ¾ÆÀÌµğ/ÆĞ½º¿öµå ÀÔ·ÂÇÏ¼¼¿ä.</h2>
+        <h2 class="form-signin-heading">ê´€ë¦¬ì í™”ë©´</h2>
         <input type="text" id="loginId" name="loginId" class="form-control"  autofocus required>
-        <input type="password" id="loginPwd" name="loginPwd" class="form-control" placeholder="ÆĞ½º¿öµå" required>
+        <input type="password" id="loginPwd" name="loginPwd" class="form-control" placeholder="íŒ¨ìŠ¤ì›Œë“œ ì…ë ¥í•˜ì„¸ìš”." required>
         <label class="checkbox">
-          <input type="checkbox" value="remember-me">¾ÆÀÌµğ ±â¾ïÇÏ±â
+          <input type="checkbox" value="remember-me">ì•„ì´ë”” ì €ì¥
         </label>
-        <button id="submitBtn" name="submitBtn" class="btn btn-lg btn-primary btn-block" type="submit">·Î±×ÀÎ</button>
+        <button id="submitBtn" name="submitBtn" class="btn btn-lg btn-primary btn-block" type="submit">ì €ì¥</button>
       </form>
  
     </div> <!-- /container -->

@@ -1,14 +1,14 @@
 <?php
-##### ¼¼¼ÇÃ¼Å©.
+##### 
 require_once("common/include.session.check.php");
 
-##### »ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö È£Ãâ. 
+##### 
 require_once("../common/function.user.php");
 
-##### º¯¼ö Ãëµæ.
+#####
 $getNo = $_REQUEST['pNo'];
 
-##### °øÅë ¼³Á¤ ÇÔ¼ö È£Ãâ.
+##### 
 #$cfg_file = "config" . $code . ".php";
 if(file_exists('../common/config.sitemap.php')) {
 	require_once('../common/config.sitemap.php');
@@ -17,14 +17,14 @@ if(file_exists('../common/config.sitemap.php')) {
 	exit;
 }
 
-##### µ¥ÀÌÅ¸ º£ÀÌ½º Á¢¼Ó.
+##### 
 $db = mysql_select_db($dbName);
 if(!$db) {
 	error("FAILED_TO_SELECT_DB");
 	exit;
 }
 
-##### html head °øÅë ºÎºÐ È£Ãâ.
+##### html head 
 require_once("../common/include.header.php");
 ?>
 <style type="text/css">
@@ -64,7 +64,7 @@ onPrev = function() {
  <div id="head" class="bg-primary"  style="height:100">
 	<div id="title">
 		<p align="right" style="height: 30">
-			<a href="signout.php"><b><font color="#000000">·Î±× ¾Æ¿ô</font></b></a>
+			<a href="signout.php"><b><font color="#000000">ë¡œê·¸ì•„ì›ƒ</font></b></a>
 		</p>
 	</div>
  </div>
@@ -72,7 +72,7 @@ onPrev = function() {
       
  <!-- page title -->
  <div class="page_title">
-  <h2>»çÀÌÆ®¸Ê °ü¸® È­¸é - ¼öÁ¤È­¸é</h2>
+  <h2>ê´€ë¦¬ìž í™”ë©´</h2>
  </div>
  <!-- page title -->
 
@@ -82,7 +82,7 @@ onPrev = function() {
 	<section>
     <div>
 <?php
-##### ·¹ÄÚµå Á¤º¸ Ãëµæ.
+##### 
 $query = "SELECT no, ctg_code, ctg_name, site_name, site_url FROM tbl_sitemap_ko WHERE no = $getNo";
 $result = mysql_query($query);
 if(!$result) {
@@ -100,18 +100,18 @@ $my_site_url = $row->site_url;
 ?>
      <table id="tblForm">
 	    <tr>
-	      	<td>Ä«Å×°í¸® ÄÚµå : </td>
+	      	<td>ì¹´í…Œê³ ë¦¬ ì½”ë“œ : </td>
 	      	<td><input type="text" id="ctgName" name="ctgCode" value="<?php echo($my_ctg_code)?>" size="5" required /></td>
 	    </tr>     
 	    <tr>
-	      	<td>Ä«Å×°í¸®¸í : </td>
+	      	<td>ì¹´í…Œê³ ë¦¬ ëª… : </td>
 	      	<td><input type="text" id="ctgName" name="ctgName" value="<?php echo($my_ctg_name)?>" size="50" required /></td>
 	    </tr>
 	    <tr>
-	      <td>»çÀÌÆ®¸í : </td><td><input type="text" id="siteName" name="siteName" value="<?php echo($my_site_name)?>" size="100" required /></td>
+	      <td>ì‚¬ì´íŠ¸ ëª… : </td><td><input type="text" id="siteName" name="siteName" value="<?php echo($my_site_name)?>" size="100" required /></td>
 	    </tr>
 	    <tr>
-	      <td>»çÀÌÆ® URL : </td><td><input type="text" id="siteUrl" name="siteUrl" value="<?php echo($my_site_url)?>" size="100" required /></td>
+	      <td>ì‚¬ì´íŠ¸ URL : </td><td><input type="text" id="siteUrl" name="siteUrl" value="<?php echo($my_site_url)?>" size="100" required /></td>
 	    </tr>	
      </table>
     </div> 
@@ -121,8 +121,8 @@ $my_site_url = $row->site_url;
 		<table>
 			<tr>
 				<td>
-					<input type="button" id="prevBtn" name="prevBtn" value="ÀÌÀü È­¸é"/>&nbsp;
-					<input type="button" id="saveBtn" name="saveBtn" value="ÀúÀå"/>			
+					<input type="button" id="prevBtn" name="prevBtn" value="ì´ì „"/>&nbsp;
+					<input type="button" id="saveBtn" name="saveBtn" value="ì €ìž¥/>			
 				</td>
 			</tr>	
 		</table>

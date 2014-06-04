@@ -1,11 +1,11 @@
 <?php
-##### ¼¼¼ÇÃ¼Å©.
+##### 
 require_once("common/include.session.check.php");
 
-##### »ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö È£Ãâ. 
+##### 
 require_once("../common/function.user.php");
 
-##### °øÅë ¼³Á¤ ÇÔ¼ö È£Ãâ.
+##### 
 #$cfg_file = "config" . $code . ".php";
 if(file_exists('../common/config.sitemap.php')) {
 	require_once('../common/config.sitemap.php');
@@ -14,7 +14,7 @@ if(file_exists('../common/config.sitemap.php')) {
 	exit;
 }
 
-##### µ¥ÀÌÅ¸ º£ÀÌ½º Á¢¼Ó.
+##### 
 $db = mysql_select_db($dbName);
 if(!$db) {
 	error("FAILED_TO_SELECT_DB");
@@ -57,7 +57,7 @@ section.custom-footer a, section.custom-footer address {
  <div id="head" class="bg-primary"  style="height:100">
 	<div id="title">
 		<p align="right" style="height: 30">
-			<a href="signout.php"><b><font color="#000000">·Î±× ¾Æ¿ô</font></b></a>
+			<a href="signout.php"><b><font color="#000000">ë¡œê·¸ì•„ì›ƒ</font></b></a>
 		</p>
 	</div>
  </div>
@@ -65,7 +65,7 @@ section.custom-footer a, section.custom-footer address {
       
  <!-- page title -->
  <div class="page_title">
-  <h2>»çÀÌÆ®¸Ê °ü¸® È­¸é - ¸®½ºÆ®</h2>
+  <h2>ê´€ë¦¬ìž í™”ë©´</h2>
  </div>
  <!-- page title -->
 
@@ -89,19 +89,19 @@ section.custom-footer a, section.custom-footer address {
       <thead>
        <tr>
         <th><input type="checkbox" id="allYnChkBtn" name="allYnChkBtn" value=""/></th>
-        <th title="no">¹øÈ£</th>
-        <th title="ctg_name">Ä«Å×°í¸®¸í</th>
-        <th title="site_name">»çÀÌÆ®¸í</th>
-        <th title="site_url">»çÀÌÆ®URL</th>
-        <th title="regist_user">µî·ÏÀÚ¸í</th>       
-        <th title="regist_date">µî·ÏÀÏ</th>
-        <th title="update_user">¼öÁ¤ÀÚ¸í</th>       
-        <th title="update_date">¼öÁ¤ÀÏ</th>        
+        <th title="no">ë²ˆí˜¸</th>
+        <th title="ctg_name">ì¹´í…Œê³ ë¦¬ ëª…</th>
+        <th title="site_name">ì‚¬ì´íŠ¸ ëª…</th>
+        <th title="site_url">ì‚¬ì´íŠ¸ URL</th>
+        <th title="regist_user">ë“±ë¡ìžëª…</th>       
+        <th title="regist_date">ë“±ë¡ì¼</th>
+        <th title="update_user">ìˆ˜ì •ìžëª…</th>       
+        <th title="update_date">ìˆ˜ì •ì¼</th>        
        </tr>
       </thead>
 	  <tbody>      
 <?php
-##### ÃÑ ·¹ÄÚµåÀÇ °¹¼ö¸¦ ±¸ÇÑ´Ù.
+##### 
 $result = mysql_query("SELECT count(no) FROM tbl_sitemap_ko");
 if(!$result) {
 	error("QUERY_ERROR");
@@ -110,10 +110,10 @@ if(!$result) {
 $total_record = mysql_result($result,0,0);
 mysql_free_result($result);
 
-##### ÀüÃ¼ ÆäÀÌÁö ¼ö¸¦ °è»êÇÑ´Ù.
+##### 
 $total_page = ceil($total_record/$num_per_page);
 
-##### ÁöÁ¤ÇÏ¤¤ ÆäÀÌÁö¿¡ ´ëÇÏ¿© Ãâ·ÂÇÒ ·¹ÄÚµå ¹øÈ£ÀÇ ¹üÀ§¸¦ °áÁ¤ÇÔ.
+##### 
 if($total_record == 0) {
 	$first = 1;
 	$last = 0;
@@ -122,10 +122,10 @@ if($total_record == 0) {
 	$last = $num_per_page*$page;
 }
 
-##### µ¥ÀÌÅ¸ Ãëµæ.
+##### 
 if($total_record) {
 
-	##### ÇöÀç ÆäÀÌÁö¿¡ Ãâ·ÂÇÒ °á°ú ·¹ÄÚµå ¼ÂÀ» Ãëµæ.
+	##### 
 	$result = mysql_query("SELECT no, ctg_name, site_name, site_url, regist_user, regist_date, update_user, update_date  
 	FROM tbl_sitemap_ko ORDER BY no DESC LIMIT $first, $num_per_page");
 	if(!$result) {
@@ -133,9 +133,9 @@ if($total_record) {
 		exit;
 	} 
 
-	##### °Ô½Ã¹° °¡»ó¹øÈ£(°Ô½Ã¹°ÀÇ °³¼ö¿¡ µû¸¥ ÀÏ·Ã¹øÈ£)
+	##### 
 	$article_num = $total_record = $num_per_page*($page-1);
-	##### ·¹ÄÚµå ÇÊµå°ª º¯¼ö¿¡ ´ëÀÔ.
+	##### 
 	while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 		$my_no = $row['no'];
 		$my_ctg_name = $row['ctg_name'];
@@ -163,7 +163,7 @@ if($total_record) {
 } else {
 ?>
 	<tr>
-		<td colspan="6" align="center">ÇØ´ç µ¥ÀÌÅ¸°¡ ¾ø½À´Ï´Ù.</td>
+		<td colspan="6" align="center">ì•„ì´ìŠ¤ë§ˆíŠ¸ì½”ë¦¬ì•„ë‹·ë„·</td>
 	</tr>
 <?php 
 }
@@ -186,8 +186,8 @@ if($total_record) {
 		<table>
 			<tr>
 				<td>
-					<input type="button" id="insertBtn" name="insertBtn" value="Ãß°¡"/>&nbsp;
-					<input type="button" id="delBtn" name="delBtn" value="»èÁ¦"/>				
+					<input type="button" id="insertBtn" name="insertBtn" value="ìž…ë ¥"/>&nbsp;
+					<input type="button" id="delBtn" name="delBtn" value="ì‚­ì œ"/>
 				</td>
 			</tr>	
 		</table>

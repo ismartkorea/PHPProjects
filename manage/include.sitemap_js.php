@@ -7,7 +7,7 @@ $(document).ready(function() {
 	$( "#insertBtn" ).click(fn_onInsert);
 	//$( "#delBtn" ).click(fn_onDel);
 
-	// Ã¼Å© ¹Ú½º ¸ğµÎ Ã¼Å©
+	// ì²´í¬ë²„íŠ¼ ì²˜ë¦¬.
 	$("#allYnChkBtn").click(function() {
 		if($(this).is(":checked")) {
 			$("input:checkbox[id^=chkBox]").prop("checked",true);
@@ -16,12 +16,12 @@ $(document).ready(function() {
 		}
 	});
 
-	// »èÁ¦ ¹öÆ°Ã³¸®.
+	// ì‚­ì œë²„í„´ ì²˜ë¦¬.
 	$("#delBtn").click(function() {
-		// Ã¼Å©¹Ú½º È®ÀÎ.
+		// Ã¼Å©ï¿½Ú½ï¿½ È®ï¿½ï¿½.
 		var chkCnt = $("input[name='chkBox[]']:checkbox:checked").length;
 		if (chkCnt == 0){
-			alert("»èÁ¦ÇÒ Ã¼Å©¹Ú½º¸¦ ¼±ÅÃÇÏ¼¼¿ä.");
+			alert("ì‚­ì œí•  í•­ëª©ì„ ì²´í¬í•˜ì„¸ìš”!");
 			return;
 		}
 		document.frm.action = "sitemap_delete.php";
@@ -30,7 +30,7 @@ $(document).ready(function() {
 	
 	
 });
-// ÀÔ·Â ÇÔ¼ö.
+// ì…ë ¥ì²˜ë¦¬.
 fn_onInsert = function() {
 	location.href = "sitemap_insertForm.php";
 }
@@ -44,7 +44,7 @@ fn_onInsert = function() {
 // 	} 
 // }
 
-// ¼öÁ¤ È­¸é ÀÌµ¿.
+// ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ ï¿½Ìµï¿½.
 fn_onView = function(no) {
 	location.href = "sitemap_updateForm.php?pNo=" + no;
 }

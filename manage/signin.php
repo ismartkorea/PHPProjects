@@ -1,12 +1,12 @@
 <?php 
-##### »ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö È£Ãâ.
+##### ì‚¬ìš©ìì •ì˜í•¨ìˆ˜ ì·¨ë“.
 require_once("../common/function.user.php");
 
-##### º¯¼ö Ãëµæ.
+##### ë¡œê·¸ì¸ì•„ì´ë””/íŒ¨ìŠ¤ì›Œë“œ ì·¨ë“.
 $getSignID = $_POST['loginId'];
 $getSignPWD = $_POST['loginPwd'];
 
-##### °øÅë ¼³Á¤ ÇÔ¼ö È£Ãâ.
+##### í™˜ê²½ì„¤ì • ì·¨ë“.
 #$cfg_file = "config" . $code . ".php";
 if(file_exists('../common/config.sitemap.php')) {
 	require_once('../common/config.sitemap.php');
@@ -14,7 +14,7 @@ if(file_exists('../common/config.sitemap.php')) {
 	error("NOT_FOUND_CONFIG_FILE");
 	exit;
 }
-##### µ¥ÀÌÅ¸ º£ÀÌ½º Á¢¼Ó.
+##### DB ì ‘ì†
 $db = mysql_select_db($dbName);
 if(!$db) {
 	error("FAILED_TO_SELECT_DB");
@@ -30,7 +30,7 @@ if(!$result) {
 #####
 $rows = mysql_num_rows($result);
 
-##### ÀÏÄ¡ÇÏ´Â È¸¿øÁ¤º¸°¡ ¾ø´Â °æ¿ì,
+##### ì—ëŸ¬ì²˜ë¦¬.
 if(!$rows) {
 	error("LOGIN_IN_NOT_FOUND");
 	exit;
@@ -41,11 +41,11 @@ if(!$rows) {
 	$db_userpwd = $row->user_pwd;
 	$db_name = $row->user_name;
 	
-	##### »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ºñ¹Ğ¹øÈ£¸¦ ¾ÏÈ£È¯ÇÑ´Ù.
+	#####
 	//$result = mysql_query("SELECT password('$user_pwd')");
 	//$userPwd = mysql_result($result,0,0);
 	
-	##### µÎ ºñ¹Ğ¹øÈ£¸¦ ºñ±³ÇÏ¿© ÀÏÄ¡ÇÏ¸é ¼¼¼Ç »ı¼º.
+	##### ì—ëŸ¬ì²˜ë¦¬.
 	//if(strcmp($db_userpwd, $userPwd)) {
 	if(strcmp($db_userpwd, $getSignPWD)) {
 		error("LOGIN_INVALID_PW");
@@ -56,20 +56,20 @@ if(!$rows) {
 			error("HTTP_HEADERS_SENT");
 		} else {
 			
-			##### ¼¼¼Ç »ı¼º.
+			##### ì„¸ì…˜ì‹œì‘.
 			session_start();
 			
-			##### »ı¼ºµÈ ¼¼¼Ç¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¼¼¼Ç º¯¼ö¸¦ µî·ÏÇÔ.
+			##### 
 			//session_register("manager_id");
 			//session_register("manager_pwd");
 			//session_register("manager_name");
 			
-			##### µî·ÏµÈ ¼¼¼Ç º¯¼ö¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÑ´Ù.
+			##### ì„¸ì…˜ì €ì¥ì²˜ë¦¬.
 			$_SESSION['manager_id'] = $db_id;
 			$_SESSION['manager_pwd'] = $db_userpwd;
 			$_SESSION['manager_name'] = $db_name;
 			
-			##### »ç¿ëÀÚ°¡ ¿äÃ»ÇÑ URL·Î ÀÌµ¿.
+			##### 
 			echo("<meta http-equiv='Refresh' content='0; URL=sitemap_list.php'>");
 		}
 	}

@@ -2,15 +2,15 @@
 	header("content-type:text/html; charset=euc-kr");
 
 	session_start();
-	##### ¼¼¼ÇÁ¾·á
+	##### ì„¸ì…˜í•´ì œ ì²˜ë¦¬.
 	session_destroy();
 	
 	echo ("<script type=\"text/javascript\">
 	<!--
-		alert('·Î±×¾Æ¿ô ÇÏ¿´½À´Ï´Ù.');
+		alert(ë¡œê·¸ì•„ì›ƒì²˜ë¦¬ë˜ì—ˆìŠµë‹ˆë‹¤.');
 	//-->
 	</script>");	
 	
-	##### »ç¿ëÀÚ°¡ ¿äÃ»ÇÑ URL·Î ÀÌµ¿.
+	#####
 	echo("<meta http-equiv='Refresh' content='0; URL=../index.php'>");
 ?>

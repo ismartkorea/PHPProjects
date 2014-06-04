@@ -1,9 +1,9 @@
 <?php
-##### ¼¼¼Ç »õ·Î »ý¼ºÇÏ°Å³ª ±âÁ¸ÀÇ ¼¼¼ÇÀ» ¿¬°áÇÑ´Ù.
+##### ì„¸ì…˜ ì‹œìž‘.
 session_start();
 
 //$getId = $_SESSION['manager_id'];
-##### ·Î±×ÀÎÀ» °ÅÄ¡Áö ¾Ê¾ÒÀ» °æ¿ì È¸¿ø ·Î±×ÀÎ È­¸éÀ¸·Î µÇµ¹·Á º¸³½´Ù.
+##### ì„¸ì…˜ ë¡œê·¸ì¸ ì²˜ë¦¬.
 if(!$_SESSION["manager_id"]) {
 	echo("<meta http-equiv='Refresh' content='0; URL=signinForm.php'>");
 }
