@@ -1,5 +1,5 @@
 <?php 
-##### °Ô½Ã¹° ¸ñ·ÏÇÏ´Ü°ú °¢ ÆäÀÌÁö·Î ÀÌµ¿ÇÒ ¼ö ÀÖ´Â ÆäÀÌÁö ¸µÅ©¿¡ ´ëÇÑ ¼³Á¤.
+##### í˜ì´ì§• ì…‹íŒ…
 $total_block = ceil($total_page/$page_per_block);
 $block = ceil($page/$page_per_block);
 
@@ -10,30 +10,30 @@ if($block >= $total_block) {
 	$last_page = $total_page;
 }
 
-##### ÀÌÀü ÆäÀÌÁö ºí·Ï¿¡ ´ëÇÑ ÆäÀÌÁö ¸µÅ©
+##### ì´ì „ í˜ì´ì§€ ì²˜ë¦¬.
 if($block > 1) {
 	$my_page = $first_page;
 	echo("<a href=\"sitemap_list.php?page=$my_page\" 
-onMouseOver=\"status='ÀÌÀü $page_per_block  ÆäÀÌÁö ÀÌµ¿';return true;\" 
-onMouseOut=\"status=' '\">[ÀÌÀü ${page_per_block}°³]</a>");
+onMouseOver=\"status='ì´ì „ $page_per_block  í˜ì´ì§€';return true;\" 
+onMouseOut=\"status=' '\">[ì´ì „ ${page_per_block}ê°œ]</a>");
 }
 
-##### ÇöÀç ÆäÀÌÁö ºí·Ï ¹üÀ§ ³»¿¡¼­ °¢ ÆäÀÌÁö·Î ¹Ù·Î ÀÌµ¿ÇÒ ¼ö ÀÖ´Â ÇÏÀÌÆÛ¸µÅ©¸¦ Ãâ·Â.
+##### ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Û¸ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½.
 for($direct_page = $first_page+1; $direct_page <= $last_page; $direct_page++) {
 	if($page == $direct_page) {
 		echo("<b>[$direct_page]</b>");
 	} else {
 		echo("<a href=\"sitemap_list.php?page=$direct_page\"
-onMouseOver=\"status='ÆäÀÌÁö·Î ÀÌµ¿';return true;\"
+onMouseOver=\"status='í˜ì´ì§€ë¡œ ì´ë™';return true;\"
 onMouseOut=\"status=' '\">[$direct_page]</a>");
 	}
 }
 
-##### ´ÙÀ½ ÆäÀÌÁö ºí·Ï¿¡ ´ëÇÑ ÆäÀÌÁö ¸µÅ©
+##### ë‹¤ìŒ í˜ì´ì§€ ì²˜ë¦¬.
 if($block < $total_block) {
 	$my_page = $last_page+1;
 	echo("<a href=\"sitemap_list.php?page=$my_page\" 
-onMouseOver=\"status='¾Õ $page_per_block ÆäÀÌÁö ÀÌµ¿';return true;\" 
-onMouseOut=\"status=' '\">[´ÙÀ½ ${page_per_block}°³]</a>");
+onMouseOver=\"status='ë‹¤ìŒ $page_per_block í˜ì´ì§€';return true;\" 
+onMouseOut=\"status=' '\">[ë‹¤ìŒ ${page_per_block}ê°œ]</a>");
 }
 ?>
