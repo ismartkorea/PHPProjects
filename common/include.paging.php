@@ -18,7 +18,7 @@ onMouseOver=\"status='이전 $page_per_block  페이지';return true;\"
 onMouseOut=\"status=' '\">[이전 ${page_per_block}개]</a>");
 }
 
-##### ���� ������ ��� ���� ������ �� �������� �ٷ� �̵��� �� �ִ� �����۸�ũ�� ���.
+##### 
 for($direct_page = $first_page+1; $direct_page <= $last_page; $direct_page++) {
 	if($page == $direct_page) {
 		echo("<b>[$direct_page]</b>");
