@@ -1,8 +1,8 @@
 <?php
-##### »ç¿ëÀÚ Á¤ÀÇ ÇÔ¼ö È£Ãâ.
+##### ì‚¬ìš©ìžì •ì˜í•¨ìˆ˜ì·¨ë“.
 require_once("common/function.user.php");
 
-##### °øÅë ¼³Á¤ ÇÔ¼ö È£Ãâ.
+##### í™˜ê²½ì„¤ì • ì·¨ë“.
 #$cfg_file = "config" . $code . ".php";
 if(file_exists('common/config.sitemap.php')) {
 	require_once('common/config.sitemap.php');
@@ -11,14 +11,14 @@ if(file_exists('common/config.sitemap.php')) {
 	exit;
 }
 
-##### µ¥ÀÌÅ¸ º£ÀÌ½º Á¢¼Ó.
+##### DB ì ‘ì†ì²˜ë¦¬.
 $db = mysql_select_db($dbName);
 if(!$db) {
 	error("FAILED_TO_SELECT_DB");
 	exit;
 }
 
-##### 
+##### ê²€ìƒ‰ì–´ ì·¨ë“.
 if(isset($_POST['searchText'])) {
 $searchText = $_POST['searchText'];
 //echo("search_text = " . $searchText);
@@ -28,7 +28,7 @@ $searchText = $_POST['searchText'];
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Æ÷ÅÐ »çÀÌÆ® ¸Ê ¸ÞÀÎ ÆäÀÌÁö.</title>
+<title>í¬í„¸ ì‚¬ì´íŠ¸ ë§µ ë©”ì¸ íŽ˜ì´ì§€ ê²€ìƒ‰ê²°ê³¼</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <!--[if lt IE 7]>
@@ -145,7 +145,7 @@ color: #f8f8f8;
 onSubmit = function() {
 var frm = document.frm;
 	if(frm.searchText.value == "") {
-		alert("°Ë»öÇÒ »çÀÌÆ®¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		alert("ê²€ìƒ‰í•  ì‚¬ì´íŠ¸ëª…ì„ ìž…ë ¥í•˜ì„¸ìš”.");
 		frm.searchText.focus();		
 		return false;
 	}
@@ -167,9 +167,9 @@ var frm = document.frm;
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<form id="frm" name="frm" method="post" class="navbar-form navbar-right visible-lg" role="search">
 		  <div class="form-group">
-			<input type="text" id="searchText" name="searchText" class="form-control" placeholder="&nbsp;°Ë»öÇÒ »çÀÌÆ®¸í ÀÔ·ÂÇÏ¼¼¿ä." required>
+			<input type="text" id="searchText" name="searchText" class="form-control" placeholder="&nbsp;ê²€ìƒ‰í•  ì‚¬ì´íŠ¸ëª… ìž…ë ¥í•˜ì„¸ìš”." required>
 		  </div>
-		  <button type="submit" id="submitBtn" name="submitBtn" class="btn btn-primary" onclick="onSubmit();">°Ë»ö</button>
+		  <button type="submit" id="submitBtn" name="submitBtn" class="btn btn-primary" onclick="onSubmit();">ê²€ìƒ‰</button>
 		</form>
 	</div><!-- /.navbar-collapse --> 
 	</div>	
@@ -181,7 +181,7 @@ var frm = document.frm;
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h1>ÄÚ¸®¾Æ »çÀÌÆ®¸Ê (¸µÅ©¸ðÀ½ »çÀÌÆ®)</h1>
+					<h1>ì½”ë¦¬ì•„ ì‚¬ì´íŠ¸ë§µ (ë§í¬ëª¨ìŒ ì‚¬ì´íŠ¸)</h1>
 				</div>
 			</div>
 		</div>
@@ -190,12 +190,12 @@ var frm = document.frm;
 	<table width="650" height="100%" cellpadding="0" cellspacing="0" border="0">
 	<thead>
 		<tr>
-			<td>Ä«Å×°í¸®¸í</td><td>»çÀÌÆ®¸í</td><td>»çÀÌÆ® ¸µÅ©</td>
+			<td>ì¹´í…Œê³ ë¦¬ëª…</td><td>ì‚¬ì´íŠ¸ëª…</td><td>ì‚¬ì´íŠ¸ë§í¬</td>
 		</tr>
 	</thead>
 <?php
 
-##### ·¹ÄÚµå Á¤º¸ Ãëµæ.
+##### ì¿¼ë¦¬ ì¡°íšŒ.
 $query = "SELECT ctg_name, site_name, site_url FROM tbl_sitemap_ko WHERE site_name like '%" . $searchText . "%'";
 $result = mysql_query($query);
 if(!$result) {
@@ -229,10 +229,10 @@ while($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 							<div>
 								<ul class="list-unstyled">
 									<li>
-										 <a href="http://www.ismartkorea.net/">¾ÆÀÌ½º¸¶Æ®ÄÚ¸®¾Æ ´å³Ý</a>
+										 <a href="http://www.ismartkorea.net/">ì•„ì´ìŠ¤ë§ˆíŠ¸ì½”ë¦¬ì•„ë‹·ë„·</a>
 									</li>
 									<li>
-										 <a href="http://www.bluewisesoft.com/">ºí·ç¿ÍÀÌÁî¼ÒÇÁÆ®</a>
+										 <a href="http://www.bluewisesoft.com/">ë¸”ë£¨ì™€ì´ì¦ˆì†Œí”„íŠ¸</a>
 									</li>
 									<li>
 										 <a></a>
