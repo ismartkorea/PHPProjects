@@ -27,6 +27,9 @@ if(!$db) {
 	error("FAILED_TO_SELECT_DB");
 	exit;
 }
+
+mysql_query("set names utf8",$conn);
+
 // 
 $query = "UPDATE tbl_sitemap_dev_ko SET ctg_code = '$getCtgCd', ctg_name = '$getCtgNm', site_name = '$getSiteNm', site_url = '$getSiteUrl', update_user = '$getRegistName', update_date = now() WHERE no = $getNo";
 $result = mysql_query($query);

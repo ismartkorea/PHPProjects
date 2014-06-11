@@ -19,6 +19,8 @@ if(!$db) {
 	exit;
 }
 
+mysql_query("set names utf8",$conn);
+
 ##### no 
 $result = mysql_query("SELECT max(no) FROM tbl_sitemap_dev_ko");
 if(!$result) {

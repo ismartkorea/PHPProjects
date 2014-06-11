@@ -21,6 +21,8 @@ if(!$db) {
 	exit;
 }
 
+mysql_query("set names utf8",$conn);
+
 if(isset($_REQUEST['page'])) {
 	$page = $_REQUEST['page'];
 } else {

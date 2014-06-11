@@ -18,6 +18,9 @@ if(!$db) {
 	error("FAILED_TO_SELECT_DB");
 	exit;
 }
+
+mysql_query("set names utf8",$conn);
+
 // parameter 
 $getDelNo = $_POST['chkBox'];
 

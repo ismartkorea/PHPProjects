@@ -21,6 +21,8 @@ if(!$db) {
 	exit;
 }
 
+mysql_query("set names utf8",$conn);
+
 $query = "SELECT user_id, user_pwd, user_name FROM tbl_user WHERE user_id = '$getSignID' AND user_pwd = '$getSignPWD'";
 $result = mysql_query($query);
 if(!$result) {
