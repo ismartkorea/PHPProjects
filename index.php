@@ -18,6 +18,7 @@ if(!$db) {
 	exit;
 }
 
+mysql_query("set names utf8",$conn);
 ?>
 <!DOCTYPE html>
 <html lang="ko">
