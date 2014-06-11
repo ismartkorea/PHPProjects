@@ -28,7 +28,7 @@ if(!$db) {
 	exit;
 }
 // 
-$query = "UPDATE tbl_sitemap_ko SET ctg_code = '$getCtgCd', ctg_name = '$getCtgNm', site_name = '$getSiteNm', site_url = '$getSiteUrl', update_user = '$getRegistName', update_date = now() WHERE no = $getNo";
+$query = "UPDATE tbl_sitemap_dev_ko SET ctg_code = '$getCtgCd', ctg_name = '$getCtgNm', site_name = '$getSiteNm', site_url = '$getSiteUrl', update_user = '$getRegistName', update_date = now() WHERE no = $getNo";
 $result = mysql_query($query);
 
 if($result) {

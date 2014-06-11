@@ -83,7 +83,7 @@ onPrev = function() {
     <div>
 <?php
 ##### 
-$query = "SELECT no, ctg_code, ctg_name, site_name, site_url FROM tbl_sitemap_ko WHERE no = $getNo";
+$query = "SELECT no, ctg_code, ctg_name, site_name, site_url FROM tbl_sitemap_dev_ko WHERE no = $getNo";
 $result = mysql_query($query);
 if(!$result) {
 	error("QUERY_ERROR");
@@ -122,7 +122,7 @@ $my_site_url = $row->site_url;
 			<tr>
 				<td>
 					<input type="button" id="prevBtn" name="prevBtn" value="이전"/>&nbsp;
-					<input type="button" id="saveBtn" name="saveBtn" value="저장/>			
+					<input type="button" id="saveBtn" name="saveBtn" value="저장"/>			
 				</td>
 			</tr>	
 		</table>
