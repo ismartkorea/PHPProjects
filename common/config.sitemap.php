@@ -1,9 +1,9 @@
 <?php
 ##### ����Ÿ���̽� ����.
 $hostName = "localhost";
-$userName = "rootuser";
-$userPassword = "root";
-$dbName = "sitemap";
+$userName = "ismart01";
+$userPassword = "ismart7212";
+$dbName = "ismart01";
 
 ##### ����Ÿ���̽� ����.
 $conn = @mysql_connect($hostName, $userName, $userPassword);
