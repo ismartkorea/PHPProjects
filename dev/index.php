@@ -206,9 +206,9 @@ var frm = document.frm;
   <td>
 <!-- 1번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '01'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '01'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -256,9 +256,9 @@ if($result) {
   <td>
 <!-- 2번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '02'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '02'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -306,9 +306,9 @@ if($result) {
     <td>
 <!-- 3번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '03'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '03'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -356,9 +356,9 @@ if($result) {
     <td>
 <!-- 4번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '04'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '04'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -406,9 +406,9 @@ if($result) {
     <td>
 <!-- 5번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '05'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '05'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -456,9 +456,9 @@ if($result) {
     <td>
 <!-- 6번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '06'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '06'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>       
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -508,9 +508,9 @@ if($result) {
     <td>
 <!-- 7번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '07'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '07'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>        
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -558,9 +558,9 @@ if($result) {
     <td>
 <!-- 8번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '08'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '08'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -616,8 +616,8 @@ if($result) {
 <!-- 1번째 table이 들어가는곳 -->
  <?php 
  	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '09'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>  
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -665,9 +665,9 @@ if($result) {
   <td>
 <!-- 2번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '10'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '10'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>   
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -715,9 +715,9 @@ if($result) {
     <td>
 <!-- 3번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '11'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '11'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>  
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -765,9 +765,9 @@ if($result) {
     <td>
 <!-- 4번째 table이 들어가는곳 -->
  <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '12'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '12'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>      
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -815,9 +815,9 @@ if($result) {
     <td>
 <!-- 5번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '13'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '13'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>        
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -865,9 +865,9 @@ if($result) {
     <td>
 <!-- 6번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '14'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '14'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>      
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -917,9 +917,9 @@ if($result) {
     <td>
 <!-- 7번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '15'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '15'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -967,9 +967,9 @@ if($result) {
     <td>
 <!-- 8번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '16'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '16'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1023,9 +1023,9 @@ if($result) {
   <td>
 <!-- 1번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '17'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '17'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>  
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1073,9 +1073,9 @@ if($result) {
   <td>
 <!-- 2번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '18'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '18'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1123,9 +1123,9 @@ if($result) {
     <td>
 <!-- 3번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '18'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '19'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1173,9 +1173,9 @@ if($result) {
     <td>
 <!-- 4번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '20'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '20'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1223,9 +1223,9 @@ if($result) {
     <td>
 <!-- 5번째 table이 들어가는곳 -->
   <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '21'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '21'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1273,9 +1273,9 @@ if($result) {
     <td>
 <!-- 6번째 table이 들어가는곳 -->
 <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '22'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '22'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1325,9 +1325,9 @@ if($result) {
     <td>
 <!-- 7번째 table이 들어가는곳 -->
 <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '23'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '23'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>     
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1375,9 +1375,9 @@ if($result) {
     <td>
 <!-- 8번째 table이 들어가는곳 -->
 <?php 
- 	$cat_query = "SELECT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '24'";
- 	$cat_result = mysql_query($cat_query);
- 	$cat_nm = mysql_fetch_row($cat_result);
+ 	$cat_query = "SELECT DISTINCT ctg_name FROM tbl_sitemap_dev_ko WHERE `ctg_code` = '24'";
+	$row = mysql_fetch_array(mysql_query($cat_query));
+	$cat_nm = $row['ctg_name'];
  ?>    
    <table border='0' cellpadding='0' cellspacing='0' width='96'>
     <tr>
@@ -1446,7 +1446,7 @@ if($result) {
 										 <a href="http://www.bluewisesoft.com/">블루와이즈소프트</a>
 									</li>
 									<li>
-										 <a></a>
+										 <a href="http://www.한국사이트맵.com/">한국사이트맵</a>
 									</li>
 									<li>
 										 <a></a>

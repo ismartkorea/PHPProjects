@@ -1456,7 +1456,7 @@ if($result) {
 										 <a href="http://www.bluewisesoft.com/">블루와이즈소프트</a>
 									</li>
 									<li>
-										 <a></a>
+										 <a href="http://www.한국사이트맵.com/dev/index.php">개발사이트맵</a>
 									</li>
 									<li>
 										 <a></a>

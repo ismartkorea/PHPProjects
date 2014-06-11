@@ -122,7 +122,7 @@ $my_site_url = $row->site_url;
 			<tr>
 				<td>
 					<input type="button" id="prevBtn" name="prevBtn" value="이전"/>&nbsp;
-					<input type="button" id="saveBtn" name="saveBtn" value="저장/>			
+					<input type="button" id="saveBtn" name="saveBtn" value="저장"/>			
 				</td>
 			</tr>	
 		</table>
