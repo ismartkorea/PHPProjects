@@ -24,6 +24,8 @@ if(!$db) {
 	exit;
 }
 
+mysql_query("set names utf8",$conn);
+
 ##### html head 
 require_once("../common/include.header.php");
 ?>
