@@ -18,6 +18,8 @@ if(!$db) {
 	exit;
 }
 
+mysql_query("set names utf8",$conn);
+
 ##### 검색어 취득.
 if(isset($_POST['searchText'])) {
 $searchText = $_POST['searchText'];
